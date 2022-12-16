@@ -1,0 +1,312 @@
+body {
+    color: black ;
+    font-family: 'Josefin Sans', sans-serif;
+	font-size:21px;
+    letter-spacing: 2px;
+	color: black;
+	font-weight:500;
+}
+
+#video {
+    position: absolute;
+    width: 99vw;
+    height: 580px;
+    max-height: 348px;
+    object-fit: cover;
+    overflow: hidden;
+    margin: 0;
+    transition: all 1.4s;
+}
+
+.video-first {
+    position: absolute;
+    width: 99vw;
+    object-fit: cover;
+    overflow: hidden;
+    margin: 0;
+    transition: all 1.4s;
+}
+
+.menu {
+    position: absolute;
+    text-transform: uppercase;
+    background-color: white;
+    top: 350px;
+    font-weight: 200;
+}
+
+.menu a {
+    color: black;
+    padding: 5px 10px 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.menu a:hover {
+    color: white;
+    padding: 15px 15px 15px 15px;
+    text-align: center;
+    background-color: black;
+    transition: all .3s;
+    text-decoration: none;
+}
+
+.top {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.top a {
+    filter: grayscale(0%);
+}
+
+.top a:hover {
+    filter: grayscale(100%);
+    transition: all .4s;
+}
+
+.menu th {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
+}
+
+.main {
+    position: relative;
+    top: 418px
+}
+
+.text {
+    position: absolute;
+    top: -20px;
+    left: 52vw;
+    max-width: 43vw;
+    text-align: right;
+    opacity: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 30px;
+    background-color: white;
+}
+
+.sticky-text {
+    position: fixed;
+    top: 50px;
+}
+
+#brand-identity th {
+    padding-right: 3px;
+    padding-left: 3px;
+    justify-content: center;
+}
+
+#brand-identity img {
+    width: 15vw;
+    height: 15vw;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.text-not{
+    opacity: 0;
+    transition: all .4s;
+}
+
+#brand-identity img:hover{
+    transform: scale(1.1);
+    transition: all .2s;
+}
+
+#car-dusan, #swadowed, #dijamant, #ofk-lug, #vranje, #sindjelic, #partizan, #srbija, #mavs, #olympics, #juzna-srbija, #balkan{   
+    max-width: 15vw;
+    max-height: 15vw;
+    overflow: hidden;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+#posters {
+    position: relative;
+    top: 60px
+}
+
+#posters img {
+    width: 9vw;
+    height: 9vw;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#posters img:hover{
+    transform: scale(1.1);
+    transition: all .2s;
+    cursor: pointer;
+}
+
+#p1, #p2, #p3, #p4, #p5, #p6, #p7, #p8, #p9, #p10, #p11, #p12, #p13, #p14, #p15, #p16, #p17, #p18, #p19, #p20, #p21, #p22, #p23, #p24, #p25 {
+    max-width: 9vw;
+    max-height: 9vw;
+    overflow: hidden;
+}
+
+.poster-img img{
+    position: absolute;
+    top: 868px;
+    max-width: 47vw;
+    max-height: 60vw;
+    display: block;
+    right: 17px;
+}
+
+
+.poster-img{
+    opacity: 0;
+}
+
+.text-hover img{
+    opacity: 100;
+    transition: all .8s;
+}
+
+#cooperation {
+    position: relative;
+    text-align: center;
+    top: 50vh;
+    
+}
+
+#cooperation table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cooperation img {
+    max-width: 15vw;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#cooperation img:hover {
+    filter: opacity(50%);
+    transition: 0,2s;
+}
+
+#cooperation h1{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#about-me img{
+    max-width: 7vw;
+    max-height: 7vw;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 22px;
+    padding-bottom: 30px;
+    filter: brightness(0);
+}
+
+#about-me img:hover{
+    filter: brightness(1);
+    transition: 0,3s;
+}
+
+#about-me{
+    position: relative;
+    top: 95vh;
+}
+
+#about-me table{
+    margin-left: 36vw;
+    margin-right: auto;
+}
+
+#about-me p{
+    max-width: 43vw;
+    text-align: left;
+    margin-left: 38vw;
+    margin-right: auto;
+    opacity: 10;
+    padding-top: 22px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#potpis{
+    max-width: 25vw;
+    max-height: 13vw;
+    display: block; 
+    margin-left: 38vw;
+    margin-right: auto;
+    width: 25vw;
+    height: 7vw;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#potpis:hover{
+    opacity: 0;
+    transition: 0,3s;
+}
+
+#name-real {
+    position: absolute;
+    margin-left: 39vw;
+    top: 1vh;
+}
+
+.real-name{
+    opacity: 0;
+}
+
+.about-me-hover{
+    opacity: 100;
+    transition: all .4s;
+}
+
+.text-hover{
+    opacity: 100;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+#portrait img{
+    width: 21vw;
+    transition: all .2s;
+}
+
+#portrait{
+    position: relative;
+    top: 12vh;
+    margin-left: 10vw;
+    margin-right: 70vw;
+}
+
+#portrait img:hover{
+    transform: scale(1.1);
+    transition: all .2s;
+    cursor: pointer;
+}

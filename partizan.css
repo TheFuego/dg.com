@@ -1,0 +1,134 @@
+body {
+    color: black ;
+    font-family: 'Josefin Sans', sans-serif;
+	font-size:21px;
+    letter-spacing: 2px;
+	color: black;
+	font-weight:500;
+}
+
+.menu th {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
+}
+
+.menu {
+    position: absolute;
+    text-transform: uppercase;
+    background-color: white;
+    top: 350px;
+    font-weight: 200;
+}
+
+.menu a {
+    color: black;
+    padding: 5px 10px 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.menu a:hover {
+    color: white;
+    padding: 15px 15px 15px 15px;
+    text-align: center;
+    background-color: black;
+    transition: all .3s;
+    text-decoration: none;
+}
+.text {
+    position: absolute;
+    top: -20px;
+    left: 52vw;
+    max-width: 43vw;
+    text-align: right;
+    opacity: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 30px;
+    background-color: white;
+}
+
+.text-hover{
+    opacity: 100;
+    transition: all .4s;
+}
+
+.sticky-text {
+    position: fixed;
+    top: 50px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.brand-pictures{
+    position: relative;
+    top: 50px;
+}
+
+.picture1 img{
+    margin-left: 0%;
+    margin-right: auto;
+    width: 22.5vw;
+    position: absolute;
+}
+
+.picture2 img{
+    margin-left: 2px;
+    margin-right: auto;
+    position: absolute;
+    width: 22.5vw;
+    left: 22.5vw;
+}
+
+.picture3 img{
+    margin-left: 3px;
+    margin-right: auto;
+    position: absolute;
+    top: 22.5vw;
+    width: 22.5vw;
+}
+
+.picture4 img{
+    margin-left: 2px;
+    margin-right: auto;
+    position: absolute;
+    top: 22.5vw;
+    left: 22.5vw;
+    width: 22.5vw;
+}
+.picture5 img{
+    margin-left: 3px;
+    margin-right: auto;
+    position: absolute;
+    top: 45vw;
+    width: 45vw;
+}
+.picture6 img{
+    margin-left: 3px;
+    margin-right: auto;
+    position: absolute;
+    top: 90vw;
+    width: 45vw;
+}
+
+.unvisible img{
+    transition: all .4s;
+    opacity: 0;
+}
+
+.unvisible img:hover{
+    opacity: 100;
+    transition: all .4s;
+    cursor: pointer;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Dimitrije Gocić</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="lug.css">
+        
+      </head>
+
+      <body>
+          <div class="brand-pictures">
+            <table>  
+            <tr>
+                <div class="picture1 visible" id="visible1">
+                    <img src="brand_identity/lug/1.png">
+                </div>
+                <div class="picture1 unvisible" id="unvisible1">
+                    <img src="brand_identity/lug/1u.png">
+                </div>
+                <div class="text" id="text1">
+                    <h1>OFK Lug</h1>
+                    <p><i>Omladinski fudbalski klub Lug</i> (lit. Youth Football Club Lug) is a small town, lower league team in Veliki Mokri Lug, Serbia. The team founded in 2020 is proud to bring youthful and fresh energy to the little leagues.</p>
+                </div>            
+            </tr>
+
+              <tr>
+                <div class="picture2 visible" id="visible2">
+                    <img src="brand_identity/lug/2.png">
+                </div>
+                <div class="picture2 unvisible" id="unvisible2">
+                    <img src="brand_identity/lug/2u.png">
+                </div>
+                <div class="text" id="text2">
+                    <h1>Icon</h1>
+                    <p>The mascot of the club is a fox, and that is what the icon is based of. An abstraction of the said critter, it was a challenge to make it recognizable even in small resolutions, while not losing on desired simplicity.</p>
+                </div>            
+              </tr>
+
+              <tr>
+                <div class="picture3 visible" id="visible3">
+                    <img src="brand_identity/lug/3.png">
+                </div>
+                <div class="picture3 unvisible" id="unvisible3">
+                    <img src="brand_identity/lug/3u.png">
+                </div>
+                <div class="text" id="text3">
+                    <h1>Jersey</h1>
+                    <p>White, Red, Blue. These are, in order, the most common colors that average lower league teams are brandishing. This young club, with an already passionate fanbase tries to bring something different to the table and does it achieve that goal with a playful, vivid and eyecatching pink.</p>
+                </div>            
+              </tr>
+
+            </table>
+          </div>
+
+          <div class="sticky menu" id="navbar">
+            <table>
+                <tr>
+                  <th><a href="index.html#brand-identity">Brand Identity</a></th>
+                  <th><a href="index.html#posters">Posters</a></th>
+                  <th><a href="index.html#cooperation">Cooperation</a></th>
+                  <th><a href="index.html#about-me">About Me</a></th>
+                  <th><a href="https://1970-shop.shop.brendly.rs/shop/category/Sve" target="_blank">1970 Shop↗</a></th>
+                </tr>
+            </table>
+          </div>
+
+          <script src="script.js"></script>
+          <script>
+            src="script.js"
+            window.onscroll = function() {textSticky()};
+
+            var a = {
+                picture: document.getElementById("unvisible1"),
+                text: document.getElementById("text1")
+            } 
+
+            var b = {
+                picture: document.getElementById("unvisible2"),
+                text: document.getElementById("text2")
+            } 
+
+            var c = {
+                picture: document.getElementById("unvisible3"),
+                text: document.getElementById("text3")
+            } 
+
+            var d = {
+                picture: document.getElementById("unvisible4"),
+                text: document.getElementById("text4")
+            } 
+
+            var text = document.getElementsByClassName("text");
+            var stickyT = a.text.offsetTop;
+
+            function textSticky() {
+                if (window.pageYOffset >= stickyT+50) {
+                    for (let i = 0; i < pictures.length; i++) {
+                    pictures[i].text.classList.add("sticky-text")
+                    }
+                }else{
+                    for (let i = 0; i < pictures.length; i++) {
+                    pictures[i].text.classList.remove("sticky-text")
+                    }
+                }
+            }
+
+            pictures = [a, b, c, d]
+
+            for (let i = 0; i < pictures.length; i++) {
+                pictures[i].picture.addEventListener("mouseover", function() {myFunctionB(pictures[i])})
+                pictures[i].picture.addEventListener("mouseout", function() {myFunctionC(pictures[i])});
+            }
+
+            console.log(window.pageYOffset)
+          </script>
+      </body>
+</html>
