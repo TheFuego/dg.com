@@ -147,29 +147,41 @@ for (let i = 0; i < posters.length; i++) {
 
 video.addEventListener("mouseover", function() {myFunctionV(video)})
 
-window.onscroll = function() {myFunction(), textSticky(); offset = updateOffset(); hoverRegulate() ;};
-
 potpis.addEventListener("mouseover", function() {textHover(nameReal)})
 potpis.addEventListener("mouseout", function() {textDeHover(nameReal)});
 
-console.log(offset)
-
 var dropdown = document.getElementsByClassName("menu");
+var more = document.getElementsByClassName("more");
+var stickyD = dropdown[0].offsetTop
 dropdownShown = false
 
 function showDropdown() {
     if(!dropdownShown){
         for (let i = 0; i < dropdown.length; i++) {
             dropdown[i].classList.remove("dropdown-hidden")
+            more[0].classList.add("more-drop")
         }
 
         dropdownShown = true
     }else{
         for (let i = 0; i < dropdown.length; i++) {
             dropdown[i].classList.add("dropdown-hidden")
+            more[0].classList.remove("more-drop")
         }
 
         dropdownShown = false
     }
 }
+
+function myFunctionDropdown() {
+        if (window.pageYOffset >= 150) {
+            dropdown[0].classList.add("sticky")
+            more[0].classList.add("sticky")
+        }else {
+            dropdown[0].classList.remove("sticky");
+            more[0].classList.remove("sticky");
+        }
+}
+
+window.onscroll = function() {myFunction(), textSticky(); offset = updateOffset(); hoverRegulate(); myFunctionDropdown(); console.log(dropdown)};
 

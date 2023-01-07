@@ -560,4 +560,22 @@ html {
     
         transition: all 1s;
     }
+
+    .sticky.menu {
+        position: fixed;
+        top: 0;
+        width: 95%;
+    }
+
+    .sticky.more {
+        position: fixed;
+        top: 0;
+        width: 98%;
+    }
+
+    .sticky.more.more-drop {
+        position: fixed;
+        top: 0;
+        width: 10%;
+    }
 }
