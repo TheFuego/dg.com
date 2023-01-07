@@ -445,7 +445,7 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        top: 36vh;
+        top: 65vw;
     }
 
 
@@ -510,7 +510,7 @@ html {
 
     #portrait{
         position: relative;
-        top: -40vh;
+        top: -50vw;
         margin-left: 10vw;
         margin-right: 70vw;
     }
@@ -528,7 +528,7 @@ html {
     #name-real {
         position: absolute;
         margin-left: 39vw;
-        top: -4vh;
+        top: -4vw;
     }
     
 
@@ -542,5 +542,22 @@ html {
         height: 27vw;
         object-fit: cover;
         overflow: hidden;
+    }
+
+    .sticky-text {
+        position: fixed;
+        top: 42vw;
+    }
+
+    .text {
+        text-align: right;
+        padding-top: 2px;
+        padding-bottom: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: white;
+        font-size: 11px;
+    
+        transition: all 1s;
     }
 }
