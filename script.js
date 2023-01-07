@@ -1,11 +1,8 @@
 var navbar = document.getElementById("navbar");
 var stickyN = navbar.offsetTop
 
-
-var nameReal = {
-    picture: document.getElementById("potpis"),
-    text: document.getElementById("name-real")
-} 
+var potpis = document.getElementById("potpis")
+var nameReal = document.getElementById("name-real")
 
 var video = document.getElementById("video")
 var video2 = document.getElementById("video-first")
@@ -148,12 +145,31 @@ for (let i = 0; i < posters.length; i++) {
     posterThumbs[i].addEventListener("click", function() {activate(posters[i])})
 }
 
-nameReal.picture.addEventListener("mouseover", function() {textHover(nameReal.text)});
-nameReal.picture.addEventListener("mouseout", function() {textDeHover(nameReal.text)});
-
 video.addEventListener("mouseover", function() {myFunctionV(video)})
 
 window.onscroll = function() {myFunction(), textSticky(); offset = updateOffset(); hoverRegulate() ;};
 
+potpis.addEventListener("mouseover", function() {textHover(nameReal)})
+potpis.addEventListener("mouseout", function() {textDeHover(nameReal)});
+
 console.log(offset)
+
+var dropdown = document.getElementsByClassName("menu");
+dropdownShown = false
+
+function showDropdown() {
+    if(!dropdownShown){
+        for (let i = 0; i < dropdown.length; i++) {
+            dropdown[i].classList.remove("dropdown-hidden")
+        }
+
+        dropdownShown = true
+    }else{
+        for (let i = 0; i < dropdown.length; i++) {
+            dropdown[i].classList.add("dropdown-hidden")
+        }
+
+        dropdownShown = false
+    }
+}
 
