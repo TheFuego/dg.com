@@ -393,7 +393,7 @@ html {
         align-items: flex-end;
         font-weight: 500;
         padding: 10px 10px 10px 10px;
-        width: 98%;
+        width: 95%;
         max-width: 100%;
     }
 
@@ -445,7 +445,7 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        top: 65vw;
+        top: 58vw;
     }
 
 
@@ -509,8 +509,8 @@ html {
     }
 
     #portrait{
-        position: relative;
-        top: -50vw;
+        position: absolute;
+        top: 358vw;
         margin-left: 10vw;
         margin-right: 70vw;
     }
