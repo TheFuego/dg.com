@@ -152,7 +152,9 @@ potpis.addEventListener("mouseout", function() {textDeHover(nameReal)});
 
 var dropdown = document.getElementsByClassName("menu");
 var more = document.getElementsByClassName("more");
+var video = document.querySelector('#video')
 var stickyD = dropdown[0].offsetTop
+
 dropdownShown = false
 
 function showDropdown() {
@@ -174,7 +176,7 @@ function showDropdown() {
 }
 
 function myFunctionDropdown() {
-        if (window.pageYOffset >= 150) {
+        if (window.pageYOffset >= video.offsetHeight) {
             dropdown[0].classList.add("sticky")
             more[0].classList.add("sticky")
         }else {
@@ -185,3 +187,4 @@ function myFunctionDropdown() {
 
 window.onscroll = function() {myFunction(), textSticky(); offset = updateOffset(); hoverRegulate(); myFunctionDropdown(); console.log(dropdown)};
 
+console.log(video.offsetHeight)

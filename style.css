@@ -411,6 +411,7 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
         position: relative;
         top: 60px;
         margin-left: 2vw;
@@ -509,10 +510,7 @@ html {
     }
 
     #portrait{
-        position: absolute;
-        top: 358vw;
-        margin-left: 10vw;
-        margin-right: 70vw;
+        display: none;
     }
 
     #about-me img{
@@ -527,16 +525,18 @@ html {
 
     #name-real {
         position: absolute;
-        margin-left: 39vw;
-        top: -4vw;
+        justify-content: center;
+        margin-left: 22vw;
+        top: -1vw;
     }
     
 
     #potpis{
         max-width: 45vw;
         max-height: 12vw;
-        display: block; 
-        margin-left: 38vw;
+        display: flex; 
+        justify-content: center;
+        margin-left: auto;
         margin-right: auto;
         width: 45vw;
         height: 27vw;
