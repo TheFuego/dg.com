@@ -9,6 +9,12 @@ const featuredDiv = document.querySelector('main')
 const fHead = document.getElementById('f-head')
 const typeBtn = document.getElementsByClassName('typeBtn')
 
+const itemsNum = document.getElementById('itemsNum')
+const totalPrice = document.getElementById('totalPrice')
+
+let itemsNumLet = 0
+let totalPriceLet = 0
+
 const euro = "&euro;"
 let currency = euro
 
@@ -111,9 +117,10 @@ function createProduct(x) {
         text.innerHTML += "<h1>" + currency + priceDiscount + " <s><sup>" + currency + x.price + "</sup></s></h1>"
     }
     div.appendChild(image)
-    box.appendChild(text)
-    box.appendChild(btn)
-    
+
+    const settings = document.createElement("div")
+    settings.classList.add('settings')
+
     if(x.isSizeable){
         const sizes = document.createElement("div")
         sizes.classList.add('sizes')
@@ -122,7 +129,7 @@ function createProduct(x) {
             sizes.innerHTML += '<button class="sizeBtn">'+size+'</button>'
         });
 
-        div.appendChild(sizes)
+        settings.appendChild(sizes)
     }
 
     if(x.isColorable){
@@ -133,8 +140,12 @@ function createProduct(x) {
             colors.innerHTML += '<button style="background: linear-gradient(200deg, #dedede, #2a2a2a); background-color:'+colorIs(color)+'" class="colorBtn"></button>'
         });
 
-        div.appendChild(colors)
+        settings.appendChild(colors)
     }
+
+    box.appendChild(settings)
+    box.appendChild(text)
+    box.appendChild(btn)
     
     const tooltip = document.createElement("span")
     tooltip.classList.add('tooltip')
@@ -155,6 +166,21 @@ function createProduct(x) {
     div.appendChild(box)
 
     main.appendChild(div)
+}
+
+function updateCartInfo(x) {
+    totalPriceLet = 0
+    itemsNumLet = 0
+    
+    x.forEach(element => {
+        let tempPrice = (element.price-element.price*element.discount)*element.number
+        totalPriceLet += tempPrice
+
+        itemsNumLet += element.number
+    })
+
+    totalPrice.innerHTML = 'Total price: ' + currency + totalPriceLet
+    itemsNum.innerHTML = 'Number of items: ' + itemsNumLet
 }
 
 function removeFromCart(x) {
@@ -208,6 +234,8 @@ function draw(x) {
     x.forEach(product => {
         createProduct(product)
     }); 
+
+    updateCartInfo(x)
 
     if(x.length < 1) {
         main.innerHTML = "<h1>No products in the cart yet :)</h1>"
@@ -296,7 +324,12 @@ function draw(x) {
         console.log(x[i].number)
         
         amountInput[i].addEventListener("change", function(){
-            x[i].number = amountInput[i].value
+            if(amountInput[i].value > 0){
+                x[i].number = amountInput[i].value
+            }else if(amountInput[i].value <= 0){
+                amountInput[i].value = 1
+                x[i].number = 1
+            }
 
             checkDuplicates()
             localStorage.setItem("cart", JSON.stringify(cart))
@@ -319,13 +352,15 @@ function draw(x) {
 
     for(let i = 0; i < minusBtn.length; i++){
         minusBtn[i].addEventListener("click", function(){
-            x[i].number--
-            amountInput[i].value = x[i].number
+            if(x[i].number > 1){
+                x[i].number--
+                amountInput[i].value = x[i].number
 
-            checkDuplicates()
-            localStorage.setItem("cart", JSON.stringify(cart))
+                checkDuplicates()
+                localStorage.setItem("cart", JSON.stringify(cart))
 
-            getProducts(cart)
+                getProducts(cart)
+            }
         });
     }
 }
