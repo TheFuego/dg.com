@@ -173,7 +173,7 @@ function updateCartInfo(x) {
     itemsNumLet = 0
     
     x.forEach(element => {
-        let tempPrice = (element.price-element.price*element.discount)*element.number
+        let tempPrice = Math.floor(element.price-element.price*element.discount)*element.number
         totalPriceLet += tempPrice
 
         itemsNumLet += element.number
