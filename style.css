@@ -261,11 +261,6 @@ body {
     
 }
 
-#cooperation table{
-    margin-left: auto;
-    margin-right: auto;
-}
-
 #cooperation img {
     max-width: 15vw;
     padding-left: 30px;
@@ -283,6 +278,17 @@ body {
     padding-left: 30px;
     padding-right: 30px;
     background-color: white;
+}
+
+#coding {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    justify-content: center;
 }
 
 html {
