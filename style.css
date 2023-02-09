@@ -584,4 +584,8 @@ html {
         top: 0;
         width: 10%;
     }
+
+    #coding {
+        width: 98%;
+    }
 }
