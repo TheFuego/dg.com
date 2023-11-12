@@ -5,7 +5,7 @@ const imageRender = document.getElementById('image')
 
 const letters = "abcdefghijklmnopqrstuvwxyz"
 const allowedSteps = 6
-const wordList = ["partizan", "cigani smrde", "zeljko obradovic", "aleksaaa"]
+const wordList = ["flower", "umbrella", "rainstorm", "duckling", "ridiculous"]
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
